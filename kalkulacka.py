@@ -44,13 +44,14 @@ def delete():
     number1 = '0'
     number2 = '0'
     operator_text = operator.currentText()
-    result_number = '0'
-    if cancel.clicked:
-        print('jde to')
-        print(number1, operator_text, number2, result_number)
+    result_number = '0.0'
+    #if cancel.clicked:
+    #    print(number1, operator_text, number2, result_number)
     operand1.setValue(int(number1))
     operand2.setValue(int(number2))
     result.setText(str(result_number))
+    #if operator_text == "/" and number2 == 0:
+    #    result_number = CHYBA #domyslet
 
 operand1.valueChanged.connect(calculate) # připojim na tu hodnotu
 operand2.valueChanged.connect(calculate) # připojim na tu hodnotu
